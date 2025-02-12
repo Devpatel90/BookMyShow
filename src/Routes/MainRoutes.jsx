@@ -5,7 +5,7 @@ import Home from '../Pages/Home'
 export default function MainRoutes() {
   return (
     <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        <Route path='/' ></Route>
     </Routes>
   )
 }
