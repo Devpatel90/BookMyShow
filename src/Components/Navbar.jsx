@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
-          <div className="grid items-center justify-center grid-cols-3">
+          <div className="grid items-center justify-center mt-3 grid-cols-3">
         <div className="col-span-2 justify-center gap-10 py-2 flex items-center">
           <img src={Logo} alt="" />
           <form action="" className="w-[60%] relative">
@@ -32,7 +32,7 @@ function Navbar() {
               <option value="Gandhinagar">Gandhinagar</option>
             </select>
           </form>
-          <Link to={"/addForm"} className="bg-red-500 text-white py-1 rounded-lg px-4">
+          <Link to={"/addForm"} className="bg-green-500 text-white py-1 px-4">
             Add Movie
           </Link>
           <MenuIcon />

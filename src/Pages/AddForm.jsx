@@ -48,16 +48,64 @@
       setFormData({ ...formData, [name]: value });
     };
 
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    
+      let validUrl = formData.url === "";
+      let validTitle = formData.title === "";
+      let validType = formData.type === "";
+      let validLanguage = formData.language === "";
+      let validRating = formData.rating === "" || isNaN(formData.rating) || formData.rating < 1 || formData.rating > 10;
+      let validVotes = formData.votes === "" || isNaN(formData.votes);
+    
+      if (!validUrl && !validTitle && !validType && !validLanguage && !validRating && !validVotes) {
+        setMovieList(prevMovies => {
+          const updatedMovies = [...prevMovies, formData];
+          localStorage.setItem("movieList", JSON.stringify(updatedMovies));
+          return updatedMovies;
+        });
+    
+        setFormData({
+          id: v4(),
+          url: "",
+          title: "",
+          type: "",
+          language: "",
+          rating: "",
+          votes: ""
+        });
+    
+        setValid({
+          url: false,
+          title: false,
+          type: false,
+          language: false,
+          rating: false,
+          votes: false
+        });
+    
+        navigate("/");
+      } else {
+        setValid({
+          url: validUrl,
+          title: validTitle,
+          type: validType,
+          language: validLanguage,
+          rating: validRating,
+          votes: validVotes
+        });
+      }
+    };
+
     
     
 
     return (
       <>
-
   <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
           <h2 className="text-2xl font-bold text-center mb-6">Add Movie</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
               <div className="space-y-4">
 
                       <input type="text" placeholder="Movie Poster" name="url" className="w-full p-2 border rounded-md" value={formData.url} onChange={handleChange}/>
