@@ -10,16 +10,16 @@ import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined
 function Footer() {
   return (
     <>
-    <footer className='bg-black flex flex-col items-center justify-center pb-20 mt-10'>
+    <footer className='bg-[#313035] flex flex-col items-center justify-center pb-20 mt-10'>
         <div className='part1 flex justify-evenly pt-7 w-[90%]'>
             <div className='flex items-center gap-5'>
             <img src={Icon1} alt="" />
             <h1 className='text-white font-bold'>List your show</h1>
             <p className='text-white'>Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
             </div>
-            <button className='bg-red-500 text-white py-2 px-4 rounded-lg'>Contact today!</button>
+            <button className='bg-[#ec5e71] text-white py-2 px-4 rounded-lg'>Contact today!</button>
         </div>
-        <div className="part2 py-5 mt-10 bg-gray-900 flex justify-evenly w-full items-center">
+        <div className="part2 py-5 mt-10 bg-[#404043] flex justify-evenly w-full items-center">
             <div className='flex flex-col items-center gap-3 justify-center'>
                 <SupportAgentOutlinedIcon fontSize='large' className='text-gray-400' />
                 <h1 className='text-gray-400 uppercase text-xs text-center'>24/7 Customer Care</h1>
