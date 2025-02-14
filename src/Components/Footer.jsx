@@ -1,10 +1,10 @@
 import React from 'react'
 import Icon1 from "../../public/icon1.svg";
-import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 import ConfirmationNumberOutlinedIcon from '@mui/icons-material/ConfirmationNumberOutlined';
-import MarkAsUnreadOutlinedIcon from '@mui/icons-material/MarkAsUnreadOutlined';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import LinkedCameraOutlinedIcon from '@mui/icons-material/LinkedCameraOutlined';
+import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
+import MarkAsUnreadOutlinedIcon from '@mui/icons-material/MarkAsUnreadOutlined';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 
 function Footer() {
